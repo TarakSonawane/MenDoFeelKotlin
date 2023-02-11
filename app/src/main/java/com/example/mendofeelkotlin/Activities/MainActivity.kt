@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), RecyclerAdapterCategory.CellClickListe
         setContentView(binding.root)
 
 
-        URL = "https://newsapi.org/v2/top-headlines?country="+COUNTRY+"&category="+CATEGOTY+ "&q="+SEARCH+"&apiKey=6f9b1b85277c4ccc89b3133bbe05b8d6"
+        URL = "https://newsapi.org/v2/top-headlines?country="+COUNTRY+"&category="+CATEGOTY+ "&q="+SEARCH+"&apiKey=351ce7ddf9594a1d909aed8f469a6332"
 
         Log.d("yoyo", "COUNTRY : "+COUNTRY)
 
@@ -73,11 +73,7 @@ class MainActivity : AppCompatActivity(), RecyclerAdapterCategory.CellClickListe
         recyclerviewnews = findViewById<RecyclerView>(R.id.newsrecyclerview)
         recyclerviewnews.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
 
-
-
         getdata()
-
-
 
         binding.searchBar.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -108,7 +104,7 @@ class MainActivity : AppCompatActivity(), RecyclerAdapterCategory.CellClickListe
     private fun getdata() {
         binding.progress.visibility = View.VISIBLE
 
-        URL = "https://newsapi.org/v2/top-headlines?country="+COUNTRY+"&category="+CATEGOTY+ "&q="+SEARCH+"&apiKey=6f9b1b85277c4ccc89b3133bbe05b8d6"
+        URL = "https://newsapi.org/v2/top-headlines?country="+COUNTRY+"&category="+CATEGOTY+ "&q="+SEARCH+"&apiKey=351ce7ddf9594a1d909aed8f469a6332"
         val queue = Volley.newRequestQueue(this)
 
         val getRequest: JsonObjectRequest = object : JsonObjectRequest(
